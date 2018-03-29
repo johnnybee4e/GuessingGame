@@ -2,39 +2,43 @@
 <html lang="en">
   <head>
     <title>Guessing Game</title>
+
+    <!-- Bootstrap and CSS here-->
     <link rel='stylesheet' type='text/css' href='main.css'>
+    <link rel='stylesheet' type='text/css' href='bootstrap.css'>
   </head>
   <body>
 
-      <div id='app' class='center'>
+      <div id='app' class='center container'>
 
-        <div id='headers' class='center'>
-          <h1>Guessing Game!</h1>
-          <h2>Guess a number between 1-100</h2>
+        <div id='headers'>
+          <!-- Title and subtitles! -->
+          <h1 id='title'>Play the Guessing Game!</h1>
+          <h3 id='subtitle'>Guess a number between 1-100</h3>
         </div>
 
         <div id='main'>
           <div id='input-parent'>
             <!-- Player's guess input, and submit button -->
-            <input placeholder="Guess Away!" maxlength='3' autofocus=autofocus></input>
-            <button>Submit</button>
+            <input id='player-input' class='center' placeholder='Guess Away!' maxlength='3' autofocus="autofocus">
+            <button id='submit' class='btn btn-success'>Try Me</button>
           </div>
 
-          <div id='guesses'>
+          <div id='guesses' class='center'>
             <!-- unordered list of guesses -->
-            <ul>
-              <li>__</li>
-              <li>__</li>
-              <li>__</li>
-              <li>__</li>
-              <li>__</li>
+            <ul id='guess-list'>
+              <li class='guess-entry'>-</li>
+              <li class='guess-entry'>-</li>
+              <li class='guess-entry'>-</li>
+              <li class='guess-entry'>-</li>
+              <li class='guess-entry'>-</li>
             </ul>
           </div>
 
           <div id="menu-btns">
             <!-- reset and hint buttons -->
-            <button>RESET</button>
-            <button>HINT</button>
+            <button id='reset' class='btn btn-danger'>From The Top</button>
+            <button id='hint'class='btn btn-info'>Help Me!</button>
           </div>
         </div>
       </div>
@@ -42,16 +46,16 @@
 
 
     <div id='footer' class='center'>
-        <div>
-          <div class=''>
+        <div class='row'>
+          <div class='col-sm-4'>
             <img src='fa-logo@2x.png'></img>
           </div>
 
-          <div class=''>
-            <h4>Project by Jonathan Rosado</h4>
+          <div class='col-sm-4'>
+            <p>Project by Jonathan Rosado</p>
           </div>
 
-          <div class=''>
+          <div class='col-sm-4'>
             <img src='grace_hopper_academy.png'></img>
           </div>
 

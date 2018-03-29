@@ -1,22 +1,89 @@
 .center {
-  text-align: center;
+text-align: center;
 }
+
 ul {
     list-style: none;
     padding: 0;
 }
+
 img {
     display: inline;
-    width: 200px;
+    width: 300px;
     height: 100px;
 }
+
+body {
+    background: url('numberTrain.jpg') no-repeat center fixed;
+    background-size: cover;
+}
+
+#app {
+    width: 60%;
+    margin: 50px auto;
+}
+
+#headers {
+    display: inline-block;
+    color: rgb(255,0,174);
+    text-shadow: 0px 3px rgb(0, 0, 0);
+    background-color: rgba(28, 28, 28,.9);
+    
+}
+
 #footer {
     width: 100%;
-    border-top: solid 2px red;
+    border-top: solid 2px black;
     background-color: white;
     position: fixed;
     bottom: 0;
 }
-li {
-  display: inline;
+
+#input-parent {
+    position: relative;
+    width: 160px;
+    margin: 2em auto;
+}
+
+#player-input {
+    border: dashed 2px grey;
+    border-radius: 50%;
+    height: 160px;
+    width: 160px;
+    font-size: 25px;
+}
+
+#submit {
+    position: absolute;
+    top: 11em;
+    left: 11.5em;
+    border-radius: 50%;
+    height: 52px;
+    width: 52px;
+    font-size: 10px;
+    padding: 0 .5em;
+}
+#guesses{
+    display: inline-block;
+    align-content: center;
+}
+
+#guess-list {
+    display: inline-block;
+    margin: 3em 0;
+    
+}
+.guess-entry {
+    display: inline-block;
+    border: solid rgb(255,185,84) 1.5px;
+    color: rgb(255,185,84);
+    background-color: rgb(28, 28, 28);
+    border-radius: 15%;
+    font-size: 4em;
+    padding: 0 .5em;
+    
+}
+
+p {
+        font-size: 1.75em;
 }
