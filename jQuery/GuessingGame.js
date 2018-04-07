@@ -38,7 +38,7 @@ Game.prototype.isLower = function() {
 }
 
 Game.prototype.playersGuessSubmission = function(number) {
-    if(number < 1 || number > 100 || typeof number !== 'number'){
+    if(number < 1 || number > 100 || typeof number !== 'number' || Number.isNaN(number)){
         $('#subtitle').text('That is an invalid guess');
         throw 'That is an invalid guess.';
     }
@@ -48,7 +48,7 @@ Game.prototype.playersGuessSubmission = function(number) {
 
 Game.prototype.checkGuess = function() {
     if(this.playersGuess === this.winningNumber) {
-        $('#hint, #submit').prop('disabled',true);
+        $('#hint, #submit, #player-input').prop('disabled',true);
         $("#subtitle").text("Good Job! Care to play again?");
         return "You Win!";
     } else if(this.pastGuesses.includes(this.playersGuess)){
@@ -59,9 +59,9 @@ Game.prototype.checkGuess = function() {
         $('#guess-list li:nth-child(' + this.pastGuesses.length +')').text(this.playersGuess);
         
         if(this.pastGuesses.length === 5){
-            $('#hint, #submit').prop('disabled',true); 
+            $('#hint, #submit, #player-input').prop('disabled',true); 
             $("#subtitle").text("Nice try! Dare to play again?");
-            return "You Lose.";
+            return `You Lose. The winning number was ${this.winningNumber}.`;
         }
     }
 
@@ -117,7 +117,7 @@ $(document).ready(function() {
         $('#title').text('Play the Guessing Game!');
         $('#subtitle').text('Guess a number between 1-100');
         $('.guess-entry').text('-');
-        $('#hint, #submit').prop('disabled', false)
+        $('#hint, #submit, #player-input').prop('disabled', false)
     })
 
     $('#hint').click(function(e) {

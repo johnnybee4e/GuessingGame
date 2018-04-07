@@ -10,7 +10,7 @@ ul {
 img {
     display: inline;
     width: 300px;
-    height: 100px;
+    height: auto;
 }
 
 body {
@@ -26,8 +26,10 @@ body {
 #headers {
     display: inline-block;
     color: rgb(255,0,174);
-    text-shadow: 0px 3px rgb(0, 0, 0);
+    border: solid rgb(255,185,84) 1.5px;
+    box-shadow: 0px 0px 10px rgb(255,185,84);
     background-color: rgba(28, 28, 28,.9);
+    padding: 5px;
     
 }
 
@@ -37,6 +39,7 @@ body {
     background-color: white;
     position: fixed;
     bottom: 0;
+    padding-top: 10px;
 }
 
 #input-parent {
@@ -46,11 +49,14 @@ body {
 }
 
 #player-input {
-    border: dashed 2px grey;
+    background-color: rgb(0,0,0);
+    color: rgb(255,185,84);
+    border: solid rgb(255,185,84) 1.5px;
     border-radius: 50%;
     height: 160px;
     width: 160px;
     font-size: 25px;
+    
 }
 
 #submit {
@@ -62,6 +68,8 @@ body {
     width: 52px;
     font-size: 10px;
     padding: 0 .5em;
+    background-color: rgb(255,185,84);
+    border: solid rgb(255,0,174) 3px;
 }
 #guesses{
     display: inline-block;
@@ -88,7 +96,9 @@ p {
         font-size: 1.75em;
 }
 
-#reset {
+#reset, #hint {
     box-shadow: 2px 3px rgb(255,185,84);
-    background-color: rgba(255,0,174,.8);
+    background-color: black;
+    border: solid rgb(255,185,84) 1.5px;
+    color: rgb(255,0,174);
 }
